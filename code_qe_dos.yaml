@@ -1,0 +1,7 @@
+---
+label: "dos"
+description: "DOS of QE 7.5, for large UV systems with CPU"
+default_calc_job_plugin: "quantumespresso.hp"
+filepath_executable: "dos.x"
+prepend_text: "module load QuantumESPRESSO/7.4-cpeGNU-24.03-CPU-bigsys"
+append_text: ""

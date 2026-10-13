@@ -1,0 +1,22 @@
+---
+label: 'lumi-c'
+hostname: lumi.csc.fi
+description: LUMI-c supercomputer in Finland, using the CPU nodes.
+transport: core.ssh_async
+scheduler: core.slurm
+shebang: '#!/bin/bash -l'
+mpiprocs_per_machine: 128
+work_dir: /scratch/project_465003441/adjoa
+default_memory_per_machine: 210000000
+mpirun_command: srun -n {tot_num_mpiprocs}
+prepend_text: |-
+    ### computer prepend_text start ###
+    #SBATCH --account=project_465003441
+    #SBATCH --partition=standard
+
+    export OMP_NUM_THREADS=1
+  
+    module purge
+    module load LUMI/25.03 
+    module load partition/C 
+    module load QuantumESPRESSO/7.5-cpeGNU-25.03-CPU-bigsys2

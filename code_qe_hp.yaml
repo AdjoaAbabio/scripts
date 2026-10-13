@@ -1,0 +1,7 @@
+---
+label: "hp"
+description: "HP of QE 7.5, for large UV systems with CPU"
+default_calc_job_plugin: "quantumespresso.hp"
+filepath_executable: "hp.x"
+prepend_text: ""
+append_text: ""

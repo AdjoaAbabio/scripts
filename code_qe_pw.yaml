@@ -1,0 +1,7 @@
+---
+label: "pw"
+description: "PW of QE 7.5, for large UV systems with CPU"
+default_calc_job_plugin: "quantumespresso.pw"
+filepath_executable: "pw.x"
+prepend_text: ""
+append_text: ""
